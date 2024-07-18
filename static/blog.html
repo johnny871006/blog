@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!--    導覽列-->
+<nav class="ui inverted attached segment padding-tb">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h1 class="ui teal header item">Blog</h1>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首頁</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分類</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>標籤</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>關於我</a>
+            <div class="right m-item  item m-mobile-hide">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--中間內容-->
+<div class="m-container-small padding-tb-massive">
+    <div class="ui container ">
+        <!--頭部區域-->
+        <div class="ui top attached segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <img src="https://picsum.photos/800/450" alt="" class="ui image avatar">
+                    <div class="content">
+                        <a class="header">God</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i>2024-07-17
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i> 666
+                </div>
+            </div>
+        </div>
+
+        <!--圖片區域-->
+        <div class="ui attached segment">
+            <img src="https://picsum.photos/800/450" alt="" class="ui fluid rounded image">
+        </div>
+
+        <!--內容區域-->
+        <div class="ui attached padded segment">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">Cool</div>
+            </div>
+
+            <h2 class="ui center aligned header">文章</h2>
+            <br>
+
+            <div id="content" class="m-padded-lr">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, suscipit.</p>
+                <h2>1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
+                <h2>2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
+                <h2>3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
+                <h2>4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
+                <h2>5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
+                <h2>總結</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
+            </div>
+
+            <!--標籤-->
+            <div class="m-padded-lr padding-tb-mini">
+                <div class="ui basic teal left pointing label">方法論</div>
+            </div>
+
+            <!--點讚-->
+            <div class="ui center aligned basic segment">
+                <button class="ui good basic orange circular button">按讚</button>
+                <label id="good">0</label>
+            </div>
+        </div>
+
+        <!--作者訊息-->
+        <div class="ui attached positive message">
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ul class="list">
+                        <li>作者: 神秘人</li>
+                        <li>發布時間: 神秘時間</li>
+                        <li>版權聲明: 神秘版權</li>
+                    </ul>
+                </div>
+                <div class="five wide column">
+                    <img src="./images/OIP.jpg" alt="" class="ui rounded bordered image" style="width: 110px">
+                </div>
+            </div>
+        </div>
+
+        <!--留言區域-->
+        <div class="ui bottom attached segment">
+            留言區域
+            <div class="ui teal segment">
+                <div class="ui comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/800/450">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/800/450">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                                <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://picsum.photos/800/450">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/800/450">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                                Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content"  placeholder="請輸入留言訊息..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-mobile-wide m-margin-bottom">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="電子信箱">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom">
+                        <button class="ui teal button m-mobile-wide">
+                            <i class="edit icon"></i>
+                            留言
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部footer-->
+<footer class="ui inverted vertical segment padding-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="images/OIP.jpg" class="ui rounded image" alt="二維碼" style="width: 120px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">New Blog</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Story</a>
+                    <a href="#" class="item">Practice List</a>
+                    <a href="#" class="item">失敗要趁早</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Contact Me</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email:xxx@gmail.com</a>
+                    <a href="#" class="item">Phone:09xxx</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">Johnny</h4>
+                <p>這是我的個人部落格，會分享一些事情。</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p>Copyright ©2024-2024 Johnny Designed by Johnny</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+<script>
+    $('.menu.toggle').click(() => {
+        $('.m-item').toggleClass('m-mobile-hide');
+    })
+
+    let total = 0;
+    $('.good').click(() => {
+        document.getElementById('good').innerHTML = ++total;
+    })
+</script>
+</body>
+</html>
