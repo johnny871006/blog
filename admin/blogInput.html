@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog管理</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/lib/editormd/css/editormd.min.css">
     <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
@@ -67,8 +68,21 @@
             </div>
 
             <div class="field">
-                <textarea name="content" placeholder="內容"></textarea>
+                <div id="md-content" style="z-index: 1 !important;">
+                    <textarea name="content" placeholder="內容" style="display: none">
+                        [TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+                    </textarea>
+                </div>
             </div>
+
             <div class="two fields">
                 <div class="field">
                     <div class="ui left labeled action input">
@@ -83,7 +97,8 @@
                             </div>
                         </div>
                     </div>
-                </div><div class="field">
+                </div>
+                <div class="field">
                     <div class="ui left labeled action input">
                         <label class="ui compact teal basic label">標籤</label>
                         <div class="ui fluid multiple search  selection dropdown">
@@ -110,25 +125,25 @@
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="recommend" name="recommend" checked class="hidden">
-                        <label for="recommend" >推薦</label>
+                        <label for="recommend">推薦</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="shareInfo" name="shareInfo" class="hidden">
-                        <label for="shareInfo" >分享</label>
+                        <label for="shareInfo">分享</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="appreciation" name="appreciation" class="hidden">
-                        <label for="appreciation" >點讚</label>
+                        <label for="appreciation">點讚</label>
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui checkbox">
                         <input type="checkbox" id="comment" name="comment" class="hidden">
-                        <label for="comment" >評論</label>
+                        <label for="comment">評論</label>
                     </div>
                 </div>
             </div>
@@ -183,8 +198,21 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+<script src="../static/lib/editormd/editormd.min.js"></script>
 
 <script>
+
+    //初始化Markdown
+    var contentEditor;
+    $(function() {
+        contentEditor = editormd("md-content", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../static/lib/editormd/lib/"
+        });
+    });
+
     $('.menu.toggle').click(() => {
         $('.m-item').toggleClass('m-mobile-hide');
     })
@@ -194,12 +222,12 @@
     });
 
     $('.ui.form').form({
-        fields:{
-            title:{
-                identifier:'title',
-                rules:[{
-                    type:'empty',
-                    prompt:'請輸入標題'
+        fields: {
+            title: {
+                identifier: 'title',
+                rules: [{
+                    type: 'empty',
+                    prompt: '請輸入標題'
                 }]
             }
         }
