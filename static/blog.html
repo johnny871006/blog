@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="./css/typo.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,11 +16,11 @@
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h1 class="ui teal header item">Blog</h1>
-            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首頁</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分類</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>標籤</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="history icon"></i>歷史檔案</a>
-            <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>關於我</a>
+            <a href="./index.html" class="m-item item m-mobile-hide"><i class="home icon"></i>首頁</a>
+            <a href="./types.html" class="m-item item m-mobile-hide"><i class="idea icon"></i>分類</a>
+            <a href="./tags.html" class="m-item item m-mobile-hide"><i class="tags icon"></i>標籤</a>
+            <a href="./archives.html" class="m-item item m-mobile-hide"><i class="history icon"></i>歷史檔案</a>
+            <a href="./about.html" class="m-item item m-mobile-hide"><i class="info icon"></i>關於我</a>
             <div class="right m-item  item m-mobile-hide">
                 <div class="ui icon inverted transparent input">
                     <input type="text" placeholder="Search...">
@@ -67,7 +69,7 @@
             <h2 class="ui center aligned header">文章</h2>
             <br>
 
-            <div id="content" class="m-padded-lr">
+            <div id="content" class="typo typo-selection m-padded-lr">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, suscipit.</p>
                 <h2>1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, odio.</p>
@@ -112,8 +114,7 @@
         </div>
 
         <!--留言區域-->
-        <div class="ui bottom attached segment">
-            留言區域
+        <div id="comment-container" class="ui bottom attached segment">
             <div class="ui teal segment">
                 <div class="ui comments">
                     <h3 class="ui dividing header">Comments</h3>
@@ -218,6 +219,20 @@
     </div>
 </div>
 
+<div class="m-fixed m-right-bottom m-padded-lr">
+    <div class="ui vertical icon buttons">
+<!--        <button type="button" class="ui toc teal button">目錄</button>-->
+        <a href="#comment-container" type="button" class="ui teal button">留言</a>
+        <button class="ui icon line button" data-content="LineID:johnny" data-position="left center"><i class="linechat icon"></i></button>
+        <a href="#" class="ui icon button"><i class="chevron up icon"></i></a>
+    </div>
+</div>
+
+<!--<div class="ui toc-container flowing popup transition hidden">-->
+<!--    生成的目錄-->
+<!--</div>-->
+
+
 <!--底部footer-->
 <footer class="ui inverted vertical segment padding-tb-massive">
     <div class="ui center aligned container">
@@ -261,6 +276,14 @@
     $('.menu.toggle').click(() => {
         $('.m-item').toggleClass('m-mobile-hide');
     })
+
+    $('.toc.button').popup({
+        popup:$('.toc-container.popup'),
+        on: 'click',
+        position: 'left center'
+    })
+
+    $('.line').popup();
 
     let total = 0;
     $('.good').click(() => {
